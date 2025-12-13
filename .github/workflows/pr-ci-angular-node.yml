@@ -105,7 +105,12 @@ jobs:
           npm test -- --watch=false --browsers=ChromeHeadless --code-coverage \
             # 2>&1 | tee "../${{ env.REPORT_DIR }}/tests.txt"
             2>&1 | tee reports/tests.txt
-
+            
+      - name: Upload reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-reports
+          path: reports/
       # ----------------------------
       # Secret scanning
       # ----------------------------
