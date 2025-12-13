@@ -12,6 +12,17 @@
     <p *ngIf="!dataList.length">No data available.</p>
   -->
 
+  <!--
+      <ul>
+        <li *ngFor="let data of dataList">
+          {{ data.id }} -  {{ data.title }} - {{ data.completed ? 'Completed' : 'Pending' }}
+        </li>
+      </ul>
+  
+      <p *ngIf="errorMessage">{{ errorMessage }}</p>
+      <p *ngIf="!dataList.length">No data available.</p>
+    -->
+
     <button (click)="sendPost()">send Post</button>
     <button (click)="loadData()">Load Data</button>
     <p>traking..,  {{ tracking }} </p>
