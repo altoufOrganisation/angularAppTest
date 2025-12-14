@@ -104,4 +104,17 @@ if (scannedFiles.length > 0) {
 
   if (undocumented.length > 0) {
     warn(
-      `Some scanned files are not referenced in modul
+      `Some scanned files are not referenced in module-docs.md:\n` +
+      undocumented.slice(0, 5).map(f => ` - ${f}`).join("\n") +
+      (undocumented.length > 5 ? "\n ..." : "")
+    );
+  } else {
+    console.log("✅ All scanned files are referenced in module documentation.");
+  }
+}
+
+// -----------------------------
+// Done
+// -----------------------------
+console.log("\n✨ Copilot documentation validation completed successfully.");
+console.log("🤖 Docs are present, structured, and aligned with instructions.");
