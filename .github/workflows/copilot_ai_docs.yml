@@ -27,7 +27,7 @@ jobs:
 
       # ✅ Copilot-adapted step
       - name: Validate Copilot-generated documentation
-        run: node generate-doc.js
+        run: node copilot-docs.js
 
       - name: Upload documentation artifacts
         uses: actions/upload-artifact@v4
