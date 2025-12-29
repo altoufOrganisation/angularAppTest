@@ -1,0 +1,26 @@
+{
+  "model": "gpt-4o-mini",
+  "describe": {
+    "enabled": true,
+    "auto_describe": true,
+    "template": "doc"
+  },
+  "templates": {
+    "doc": {
+      "system_prompt": "You are a senior developer writing documentation.",
+      "user_prompt": [
+        "Write clear PR documentation.",
+        "",
+        "Include:",
+        "1. Problem being solved",
+        "2. What changed (plain language + technical details)",
+        "3. Impact (users, services, performance, risks)",
+        "4. Deployment / migration notes",
+        "5. How it was tested",
+        "6. Follow-up work (if any)",
+        "",
+        "Keep tone concise and professional."
+      ]
+    }
+  }
+}
